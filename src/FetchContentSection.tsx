@@ -45,6 +45,7 @@ const FetchContentSection = () => {
       );
       const data = await response.json();
       setOptionData(data);
+      setCurrentPage(0);
       setIsLoading(false);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -80,7 +81,6 @@ const FetchContentSection = () => {
                 onClick={() => {
                   setSelectedOption(option as '' | 'posts' | 'comments');
                   setIsDropdownOpen(false);
-                  setCurrentPage(0);
                 }}
               >
                 {option}
