@@ -1,10 +1,13 @@
 import React from 'react';
+import Header from './components/Header';
+import './App.css';
+import FetchContentSection from './FetchContentSection';
 
 const App: React.FC = () => {
   return (
-    <div>
-      <h1>Frontend Assignment</h1>
-      {/* TODO: Add dropdown and table components here */}
+    <div className='App px-10 bg-[#FAFAFA] h-dvh'>
+      <Header />
+      <FetchContentSection />
     </div>
   );
 };
