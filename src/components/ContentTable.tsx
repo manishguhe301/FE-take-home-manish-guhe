@@ -9,7 +9,7 @@ const ContentTable = ({
   selectedOption: string;
 }) => {
   return (
-    <div className='px-7'>
+    <div className='px-7 max-sm:px-2'>
       <h4 className='text-lg font-bold text-[#344054] mb-3'>
         Displaying Content
       </h4>

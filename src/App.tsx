@@ -5,7 +5,7 @@ import FetchContentSection from './FetchContentSection';
 
 const App: React.FC = () => {
   return (
-    <div className='App px-10 bg-[#FAFAFA] h-dvh'>
+    <div className='App px-10 bg-[#FAFAFA] h-dvh max-sm:px-5'>
       <Header />
       <FetchContentSection />
     </div>

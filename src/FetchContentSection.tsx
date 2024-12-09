@@ -62,16 +62,16 @@ const FetchContentSection = () => {
       <div className=' py-1 px-7 bg-[#FFFFFF] w-full'>
         <h3 className='text-lg font-bold text-[#344054]'>Fetch Content</h3>
       </div>
-      <div className='px-7 py-4 bg-[#fff] my-2 border border-[#EAECF0] w-fit !h-[170px] rounded-lg'>
+      <div className='px-7 py-4 bg-[#fff] my-2 border border-[#EAECF0] w-fit max-sm:w-full !h-[170px] rounded-lg'>
         <div
-          className='bg-[#EEEEEE] pl-5 flex items-center justify-between w-fit gap-16 rounded-lg py-[6px] text-[#525F71] text-lg font-semibold'
+          className='bg-[#EEEEEE] pl-5 flex items-center justify-between w-fit gap-16 rounded-lg py-[6px] text-[#525F71] text-lg font-semibold max-sm:w-full'
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
         >
           <span className='capitalize'>Select content type</span>
           <ChevronDown className='pr-2' size={26} />
         </div>
         {isDropdownOpen && (
-          <div className='bg-[#EEEEEE] rounded-lg p-1 my-2 transition-all duration-300 '>
+          <div className='bg-[#EEEEEE] rounded-lg p-1 my-2 transition-all duration-300 max-sm:w-full'>
             {['posts', 'comments'].map((option) => (
               <div
                 key={option}
@@ -93,7 +93,7 @@ const FetchContentSection = () => {
             <img src='loading-circle.svg' alt='loading' className='w-12 h-12' />
           </div>
         ) : optionData.length > 0 ? (
-          <div className='px-6'>
+          <div className='px-6 max-sm:px-2'>
             <ContentTable
               data={paginatedData}
               selectedOption={selectedOption}
@@ -101,14 +101,14 @@ const FetchContentSection = () => {
             <ReactPaginate
               pageCount={Math.ceil(optionData.length / itemsPerPage)}
               onPageChange={handlePageClick}
-              containerClassName='flex px-6 gap-2 mt-4'
-              pageClassName='mx-5 cursor-pointer'
+              containerClassName='flex px-6 gap-2 mt-4 max-sm:px-2 max-sm:overflow-x-auto max-sm:w-full'
+              pageClassName='mx-5 cursor-pointer max-sm:mx-2'
               activeClassName='text-black font-bold'
               previousLabel={<ChevronLeft size={24} color='#888888' />}
               nextLabel={<ChevronRight size={24} color='#888888' />}
               breakLabel='...'
-              previousClassName='mr-5 cursor-pointer'
-              nextClassName='ml-5 cursor-pointer'
+              previousClassName='mr-5 cursor-pointer max-sm:mr-2'
+              nextClassName='ml-5 cursor-pointer max-sm:ml-2'
               disabledClassName='opacity-50 cursor-not-allowed'
             />
           </div>
