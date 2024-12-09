@@ -48,6 +48,7 @@ const FetchContentSection = () => {
       setIsLoading(false);
     } catch (error) {
       console.error('Error fetching data:', error);
+      alert('Failed to load data. Please try again later.');
     }
   };
 
