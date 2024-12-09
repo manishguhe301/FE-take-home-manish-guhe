@@ -80,6 +80,7 @@ const FetchContentSection = () => {
                 onClick={() => {
                   setSelectedOption(option as '' | 'posts' | 'comments');
                   setIsDropdownOpen(false);
+                  setCurrentPage(0);
                 }}
               >
                 {option}
